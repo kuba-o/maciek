@@ -8,6 +8,7 @@ class Czas
     	void podajCzas();
     	void wyswietl();
     	void zwiekszMinuty(int a);
+    	friend void porownajZegary(Czas zeg1, Czas zeg2);
     	Czas();  // This is the constructor
     	Czas(int h, int m);
  
