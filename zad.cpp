@@ -37,13 +37,17 @@ Czas porownajZegary(Czas zeg1, Czas zeg2){
 	temp1 += zeg1.godziny*60 + zeg1.minuty;
 	temp2 += zeg2.godziny*60 + zeg2.minuty;
 
-	if (temp1 > temp2){
+	if (temp1 > temp2) {
 		cout<<"Zegar na którym jest późniejsza godzina to pierwszy podany argument."<<endl;
 		return zeg1;
 	}
-	else {
+	else if (temp2 > temp1) {
 		cout<<"Zegar na którym jest późniejsza godzina to drugi podany argument."<<endl;
 		return zeg2;
+	}
+	else {
+		cout<<"Oba zegary wskazuja te sama godzine."<<endl;
+		return zeg1;
 	}
 }
 
@@ -63,7 +67,7 @@ int main(){
 	zegar2.zwiekszMinuty(130);
 	zegar2.wyswietl();
 
-	porownajZegary(zegar1, zegar2).wyswietl();
+	porownajZegary(zegar2, zegar2).wyswietl();
 
 	return 0;
 }
