@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+
 using namespace std;
 
 class Czas
@@ -59,6 +59,7 @@ int main(){
 	zegar1.wyswietl();
 	Czas zegar2 = Czas(4, 10);
 	zegar2.wyswietl();
+	
 	zegar2.zwiekszMinuty(130);
 	zegar2.wyswietl();
 
